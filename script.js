@@ -20,11 +20,16 @@
         <div id="text">
             <h1>${element.title}</h1>
             <p>${element.description}</p>
-            <button id="price">${element.price}</button>
+            <button id="price">$ ${element.price}</button>
             </div>`
             cardParent.appendChild(card);
         });
     }
     await getData()
+
+    const search = document.getElementById("inp")
+    const data = search.addEventListener("input", function () {
+        
+    })
 })
-    ();
+();

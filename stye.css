@@ -61,10 +61,12 @@ html,body {
     position: static;
     margin-top: 50px;
 }
-
+::-webkit-scrollbar{
+    display: none;
+}
 #body .card {
     height: 30%;
-    width: 90%;
+    width: 100%;
     background-color: #fff;
     margin-top: 10px;
     padding: 10px 0px;
