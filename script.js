@@ -1,18 +1,19 @@
-const cardParent = document.getElementById("body")
-async function getData() {
-    try {
-        const res = await fetch('https://fakestoreapi.com/products')
-        const data = await res.json()
-        renderData(data)
-    } catch (error) {
-        alert("Error occured")
+(async function () {
+    const cardParent = document.getElementById("body")
+    async function getData() {
+        try {
+            const res = await fetch('https://fakestoreapi.com/products')
+            const data = await res.json()
+            renderData(data)
+        } catch (error) {
+            alert("Error occured")
+        }
     }
-}
-function renderData(data) {
-    data.forEach(element => {
-        const card = document.createElement("div")
-        card.className = "card"
-        card.innerHTML = `
+    function renderData(data) {
+        data.forEach(element => {
+            const card = document.createElement("div")
+            card.className = "card"
+            card.innerHTML = `
         <div id="img-div">
         <img src="${element.image}" alt="">
         </div>
@@ -21,7 +22,9 @@ function renderData(data) {
             <p>${element.description}</p>
             <button id="price">${element.price}</button>
             </div>`
-        cardParent.appendChild(card);
-    });
-}
-getData()
+            cardParent.appendChild(card);
+        });
+    }
+    await getData()
+})
+    ();
