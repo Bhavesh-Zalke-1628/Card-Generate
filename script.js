@@ -26,10 +26,5 @@
         });
     }
     await getData()
-
-    const search = document.getElementById("inp")
-    const data = search.addEventListener("input", function () {
-        
-    })
 })
 ();
